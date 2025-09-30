@@ -54,7 +54,7 @@ variable "tags" {
 
 variable "create_gke_cluster" {
   type    = bool
-  default = true
+  default = false
 }
 
 variable "enable_autoscaling" {

@@ -1,11 +1,11 @@
 output "region" {
   value       = var.gcp_region
-  description = "GCloud Region"
+  description = "GCP Region"
 }
 
 output "project_id" {
   value       = var.gcp_project_id
-  description = "GCloud Project ID"
+  description = "GCP Project ID"
 }
 
 output "kubernetes_cluster_name" {
@@ -21,4 +21,9 @@ output "gke_endpoint" {
 output "gke_cluster_ca_certificate" {
   value       = module.gcp.gke.cluster_ca_certificate
   description = "GKE Cluster Certificate"
+}
+
+output "gke_nodepools" {
+  value       = module.gcp.gke.nodepools
+  description = "GKE Node Pools available"
 }
