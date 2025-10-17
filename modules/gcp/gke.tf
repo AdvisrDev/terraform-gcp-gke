@@ -80,7 +80,7 @@ resource "google_container_node_pool" "primary_nodes" {
       var.gke_cluster_labels,
       {
         env     = var.gcp_project_id
-        cluster = local.gke_cluster_name_final
+        cluster = var.gke_cluster_name
       }
     )
 

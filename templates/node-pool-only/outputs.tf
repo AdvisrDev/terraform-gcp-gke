@@ -24,6 +24,6 @@ output "gke_cluster_ca_certificate" {
 }
 
 output "gke_nodepools" {
-  value       = module.terraform-gcp-gke.nodepools
+  value       = module.terraform-gcp-gke.gke_nodepools
   description = "GKE Node Pools available"
 }
