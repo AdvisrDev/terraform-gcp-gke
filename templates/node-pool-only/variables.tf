@@ -27,11 +27,11 @@ variable "gke_nodepools" {
     }))
     node_locations = list(string)
     tags           = optional(map(string), {})
-    node_taints = optional(object({
+    node_taints = optional(map(object({
       key    = string
       value  = string
       effect = string
-    }))
+    })))
     oauth_scopes = optional(list(string), [
       "https://www.googleapis.com/auth/cloud-platform",
       "https://www.googleapis.com/auth/logging.write",

@@ -39,11 +39,11 @@ variable "gke_nodepools" {
     })
     node_locations = list(string)
     tags           = map(string)
-    node_taints = object({
+    node_taints = map(object({
       key    = string
       value  = string
       effect = string
-    })
+    }))
     oauth_scopes = list(string)
     metadata     = any
   }))
