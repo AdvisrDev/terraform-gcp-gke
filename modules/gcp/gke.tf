@@ -60,7 +60,7 @@ resource "google_container_node_pool" "primary_nodes" {
   node_locations = each.value.node_locations
 
   node_config {
-    service_account = data.google_service_account[each.key].sa.email
+    service_account = data.google_service_account.sa[each.key].email
     oauth_scopes    = each.value.oauth_scopes
 
     labels = merge(
