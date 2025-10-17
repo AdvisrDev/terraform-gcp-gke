@@ -11,8 +11,4 @@ module "gcp" {
   create_gke_cluster = var.create_gke_cluster
 
   gke_nodepools = var.gke_nodepools
-
-  providers = {
-    google = google.gcp
-  }
 }

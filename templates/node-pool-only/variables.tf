@@ -13,6 +13,11 @@ variable "gke_version_prefix" {
   type = string
 }
 
+variable "create_gke_cluster" {
+  type    = bool
+  default = false
+}
+
 variable "gke_nodepools" {
   type = map(object({
     enable          = optional(bool, true)
