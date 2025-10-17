@@ -58,7 +58,7 @@ resource "google_container_node_pool" "primary_nodes" {
   node_count = var.enable_autoscaling ? null : var.gke_num_nodes
 
   node_locations = [
-    "${var.gcp_region}-c"
+    "${var.gcp_region}"
   ]
 
   node_config {
