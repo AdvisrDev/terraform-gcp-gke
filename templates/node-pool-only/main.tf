@@ -12,6 +12,7 @@ module "terraform-gcp-gke" {
   gke_num_nodes      = var.gke_num_nodes
   gke_cluster_labels = var.gke_cluster_labels
   gke_cluster_name   = var.gke_cluster_name
+  gke_nodepool_name  = var.gke_nodepool_name
 
   create_gke_cluster       = var.create_gke_cluster
 

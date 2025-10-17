@@ -27,6 +27,9 @@ variable "gcp_subnetwork" {
 variable "gke_cluster_name" {
   type    = string
 }
+variable "gke_nodepool_name" {
+  type    = string
+}
 
 variable "gke_cluster_labels" {
   type    = map(string)
