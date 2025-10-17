@@ -15,11 +15,7 @@ output "gke" {
         ? google_container_cluster.primary[0].name
         : data.google_container_cluster.existing[0].name
     )
-    nodepools = (
-      var.create_gke_cluster
-        ? [for np in google_container_node_pool.primary_nodes : np.name]
-        : try(data.google_container_node_pools.existing[0].node_pools[*].name, [])
-    )
+    nodepools = data.google_container_cluster.existing.node_pool[*].name
   }
 }
 

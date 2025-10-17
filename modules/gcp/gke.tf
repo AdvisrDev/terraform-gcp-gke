@@ -34,13 +34,6 @@ data "google_container_cluster" "existing" {
   location = var.gcp_region
 }
 
-data "google_container_node_pools" "existing" {
-  count    = var.create_gke_cluster ? 0 : 1
-  cluster  = var.gke_cluster_name
-  location = var.gcp_region
-  depends_on = [google_container_node_pool.primary_nodes]
-}
-
 # Selecciona el nombre del cluster según el caso
 locals {
   gke_cluster_name = var.create_gke_cluster ? google_container_cluster.primary[0].name : data.google_container_cluster.existing[0].name
