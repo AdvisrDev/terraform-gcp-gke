@@ -46,7 +46,7 @@ variable "gke_nodepools" {
       max_node_count = optional(number, 2)
     }))
     node_locations = list(string)
-    tags           = optional(map(string), {})
+    tags           = optional(list(string))
     node_taints = optional(map(object({
       key    = string
       value  = string
