@@ -1,29 +1,29 @@
 output "region" {
-  value       = module.terraform-gcp-gke.region
+  value       = module.gke.region
   description = "GCloud Region"
 }
 
 output "project_id" {
-  value       = module.terraform-gcp-gke.project_id
+  value       = module.gke.project_id
   description = "GCloud Project ID"
 }
 
 output "kubernetes_cluster_name" {
-  value       = module.terraform-gcp-gke.kubernetes_cluster_name
+  value       = module.gke.kubernetes_cluster_name
   description = "GKE Cluster Name"
 }
 
 output "gke_endpoint" {
-  value       = module.terraform-gcp-gke.gke_endpoint
+  value       = module.gke.gke_endpoint
   description = "GKE Cluster Host"
 }
 
 output "gke_cluster_ca_certificate" {
-  value       = module.terraform-gcp-gke.gke_cluster_ca_certificate
+  value       = module.gke.gke_cluster_ca_certificate
   description = "GKE Cluster Certificate"
 }
 
 output "gke_nodepools" {
-  value       = module.terraform-gcp-gke.nodepools
+  value       = module.gke.nodepools
   description = "GKE Node Pools available"
 }
