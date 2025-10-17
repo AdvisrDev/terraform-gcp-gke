@@ -2,7 +2,7 @@
 data "google_client_config" "default" {}
 data "google_service_account" "sa" {
   for_each   = { for k, v in var.gke_nodepools : k => v if v.enable }
-  account_id = each.value.gcp_service_account
+  account_id = each.value.service_account
 }
 data "google_container_engine_versions" "gke_version" {
   location       = var.gcp_region
