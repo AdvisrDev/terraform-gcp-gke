@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  terraform_gcp_gke:
+    build:
+      context: ../contrib/docker
+      dockerfile: devcontainer.Dockerfile
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    user: devuser
+    container_name: terraform_gcp_gke
+    command: /bin/sh -c "while sleep 1000; do :; done"

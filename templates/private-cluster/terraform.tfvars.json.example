@@ -1,0 +1,23 @@
+{
+  "gcp_project_id": "",
+  "gcp_region": "",
+  "gcp_network": "",
+  "gcp_subnetwork": "",
+  "gke_cluster_name": "",
+  "gke_cluster_labels": "",
+  "gke_version_prefix": "",
+  "gke_nodepools": {
+    "se-latam-nodepool": {
+      "machine_type": "",
+      "service_account": "",
+      "nodepool_labels": {},
+      "autoscaling": {
+        "min_node_count": "",
+        "max_node_count": ""
+      },
+      "node_locations": [],
+      "tags": "",
+      "node_taints": ""
+    }
+  }
+}
