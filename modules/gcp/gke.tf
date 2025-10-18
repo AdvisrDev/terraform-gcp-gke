@@ -55,7 +55,7 @@ resource "google_container_node_pool" "primary_nodes" {
       max_node_count = each.value.autoscaling.max_node_count
     }
   }
-  node_count = each.value.autoscaling.enable ? null : each.value.node_count
+  node_count = each.value.node_count
 
   node_locations = each.value.node_locations
 
