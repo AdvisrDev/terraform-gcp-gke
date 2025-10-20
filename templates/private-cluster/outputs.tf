@@ -23,7 +23,8 @@ output "gke_cluster_ca_certificate" {
   description = "GKE Cluster Certificate"
 }
 
+
 output "gke_nodepools" {
-  value       = module.gke.nodepools
+  value       = module.gke.gke_nodepools
   description = "GKE Node Pools available"
 }
